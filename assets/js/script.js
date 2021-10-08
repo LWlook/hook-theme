@@ -20,8 +20,9 @@ $(document).ready(function () {
     myearth = new Earth( 'myearth', {
         location : { lat: 20, lng : 20 },
         light: 'none',
-        mapImage: '../assets/hologram/hologram-map.svg',
+        mapImage: './assets/hologram/hologram-map.svg',
         transparent: true,
+        draggable: false,
 
         autoRotate : true,
         autoRotateSpeed: 0.25,
@@ -39,7 +40,7 @@ $(document).ready(function () {
         }
         for ( var i=0; i < 8; i++ ) {
             sprites[i] = this.addSprite( {
-                image: '../assets/hologram/hologram-shine.svg',
+                image: './assets/hologram/hologram-shine.svg',
                 scale: 0.01,
                 offset: -0.5,
                 opacity: 0.5
@@ -48,7 +49,7 @@ $(document).ready(function () {
         }
 
         const tooltip_opener = this.addOverlay( {
-            content: '<div>Developers & Scientists</div>',
+            content: '<div class="fs-s3 sm-fs-s1 md-fs-m1 lg-fs-m3">Developers & Scientists</div>',
             location : {lat: 48.7666, lng: 20.4922},
             depthScale: 0.25,
             className : 'tooltip',
@@ -56,7 +57,7 @@ $(document).ready(function () {
         } );
 
         const tooltip_opener2 = this.addOverlay( {
-            content: '<div>End User</div>',
+            content: '<div class="fs-s3 sm-fs-s1 md-fs-m1 lg-fs-m3">End User</div>',
             location : {lat: -28.6331, lng: 24.8271},
             depthScale: 0.25,
             className : 'tooltip',
@@ -64,7 +65,7 @@ $(document).ready(function () {
         } );
 
         const tooltip_opener3 = this.addOverlay( {
-            content: '<div>Data miners & Crypto Farm</div>',
+            content: '<div class="fs-s3 sm-fs-s1 md-fs-m1 lg-fs-m3">Data miners & Crypto Farm</div>',
             location : {lat: -7.8816, lng: -36.3822},
             depthScale: 0.25,
             className : 'tooltip',
@@ -72,7 +73,7 @@ $(document).ready(function () {
         } );
 
         const tooltip_opener4 = this.addOverlay( {
-            content: '<div>EO service provider</div>',
+            content: '<div class="fs-s3 sm-fs-s1 md-fs-m1 lg-fs-m3">EO service provider</div>',
             location : {lat: 27.4501, lng: 39.4982},
             depthScale: 0.25,
             className : 'tooltip',
